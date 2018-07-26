@@ -6,7 +6,7 @@
 
 ## User Stories (US)
 
-**US 1:**
+### US 1:
 
 As two Players,  
 so we can play a personalised game of Battle,  
@@ -14,10 +14,25 @@ we want to start a fight by entering our names and seeing them
 
 **Feature:**
 
-Enter and save names
+- enter and save names
 
-**US 2:**
+### US 2:
 
 As Player 1,  
 so I can see how close I am to winning  
-I want to see Player 2's hit points
+I want to see Player 2's hit points  
+
+**Feature:**
+
+- view hit points
+
+### US 3:
+
+As Player 1,  
+so I can win a game of Battle,  
+I want to attack Player 2, and I want to get a confirmation
+
+**Feature:**
+
+- attack
+
