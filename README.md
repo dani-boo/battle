@@ -14,7 +14,9 @@ we want to start a fight by entering our names and seeing them
 
 **Feature:**
 
-- enter and save names
+- enter and save names  
+
+---------
 
 ### US 2:
 
@@ -24,7 +26,9 @@ I want to see Player 2's hit points
 
 **Feature:**
 
-- view hit points
+- view hit points  
+
+---------
 
 ### US 3:
 
@@ -34,5 +38,21 @@ I want to attack Player 2, and I want to get a confirmation
 
 **Feature:**
 
-- attack
+- attack  
+
+---------
+
+### US 4:
+
+As Player 1,  
+so I can start to win a game of Battle,  
+I want my attack to reduce Player 2's HP  
+
+**Feature:**
+
+- minus HP when attacked  
+
+----------
+
+
 
