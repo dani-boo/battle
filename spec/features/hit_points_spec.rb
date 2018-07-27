@@ -7,4 +7,12 @@ feature 'View hit points:' do
     sign_in_and_play
     expect(page).to have_content 'Vimes: 100HP'
   end
+
+  # As Player 1,
+  # So I can see how close I am to losing,
+  # I want to see my own hit points
+  scenario 'see Player 1 hit points' do
+    sign_in_and_play
+    expect(page).to have_content 'Vetinari: 100HP'
+  end
 end

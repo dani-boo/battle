@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require './lib/game'
 require './lib/player'
+require './lib/attack'
 
 class Battle < Sinatra::Base
   enable :sessions
@@ -11,8 +12,8 @@ class Battle < Sinatra::Base
 
   post '/names' do
     player_1 = Player.new(params[:player_1_name])
-    player_2 = Player.new(params[:player_2_name])
-    $game = Game.new(player_1, player_2)
++   player_2 = Player.new(params[:player_2_name])
++   $game = Game.new(player_1, player_2)
     redirect '/play'
   end
 
@@ -21,13 +22,25 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  get '/attack' do
+  post '/attack' do
+    Attack.run(@game.opponent_of($game.current_turn))
+    if $game.game_over?
+      redirect '/game-over'
+    else
+      redirect '/attack'
+    end
+  end
+
+  post '/switch-turns' do
+    $game.switch_turns
+    redirect('/play')
+  end
+
+  get '/game-over' do
     @game = $game
-    @game.attack(@game.player_2)
-    erb :attack
+    erb :game_over
   end
 
   # this should start the server if done correctly
   run! if app_file == $0
-
 end
