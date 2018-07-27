@@ -6,7 +6,7 @@ describe Player do
 
   describe '#name' do
     it 'returns the name' do
-      expect(vetinari.name).to eq 'Vetinari'
+      expect(vimes.name).to eq 'Vimes'
     end
   end
 
@@ -16,12 +16,12 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damages the player' do
-      expect(vimes).to receive(:receive_damage)
-      vetinari.attack(vimes)
-    end
-  end
+  # describe '#attack' do
+  #   it 'damages the player' do
+  #     expect(vimes).to receive(:receive_damage)
+  #     vetinari.attack(vimes)
+  #   end
+  # end
 
   describe '#receive_damage' do
     it 'reduces the player\'s hit points' do

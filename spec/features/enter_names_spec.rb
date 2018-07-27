@@ -1,6 +1,9 @@
+# As two Players,
+# So we can play a personalised game of Battle,
+# We want to Start a fight by entering our Names
 feature 'Enter players:' do
   scenario 'submitting names' do
     sign_in_and_play
-    expect(page).to have_content 'Havelock vs. Margolotta'
+    expect(page).to have_content 'Vetinari vs. Vimes'
   end
 end
