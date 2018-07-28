@@ -4,7 +4,6 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
-require 'features/web_helpers'
 require 'rspec'
 
 Capybara.app = Battle
@@ -108,5 +107,4 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
-  config.include Capybara::DSL
 end
