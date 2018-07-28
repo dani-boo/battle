@@ -22,7 +22,7 @@ feature 'Playing vs. a Computer' do
   
   scenario 'computer can lose' do
     sign_in_and_play(true)
-    allow(Kernel).to receive(:rand).and_return(100)
+    allow(Kernel).to receive(:rand).and_return(30)
     find_by_id('Attack').click
     expect(page).to have_content 'Computer lost!'
   end
@@ -30,7 +30,7 @@ feature 'Playing vs. a Computer' do
   scenario 'computer can win' do
     sign_in_and_play(true)
     find_by_id('Attack').click
-    allow(Kernel).to receive(:rand).and_return(100)
+    allow(Kernel).to receive(:rand).and_return(30)
     click_button 'OK'
     expect(page).to have_content 'Vetinari lost!'
   end

@@ -29,8 +29,8 @@ feature 'Attacking:' do
     scenario 'reduces Player 2\'s HP by 10' do
       sign_in_and_play
       attack_and_confirm
-      expect(page).not_to have_content 'Vimes: 100HP'
-      expect(page).to have_content 'Vimes: 90HP'
+      expect(page).not_to have_content 'Vimes: 30HP'
+      expect(page).to have_content 'Vimes: 20HP'
     end
 
     # As Player 1,
@@ -39,8 +39,8 @@ feature 'Attacking:' do
     scenario 'reduce Player 1 HP by 10' do
       sign_in_and_play
       2.times { attack_and_confirm }
-      expect(page).not_to have_content 'Vetinari: 100HP'
-      expect(page).to have_content 'Vetinari: 90HP'
+      expect(page).not_to have_content 'Vetinari: 30HP'
+      expect(page).to have_content 'Vetinari: 20HP'
     end
   end
 
@@ -51,13 +51,13 @@ feature 'Attacking:' do
     scenario 'reduce Player 2 HP by a random amount' do
       sign_in_and_play
       attack_and_confirm
-      expect(page).not_to have_content 'Vimes: 100HP'
+      expect(page).not_to have_content 'Vimes: 30HP'
     end
 
     scenario 'reducing Player 1\'s HP by a random amount' do
       sign_in_and_play
       2.times { attack_and_confirm }
-      expect(page).not_to have_content 'Vetinari: 100HP'
+      expect(page).not_to have_content 'Vetinari: 30HP'
     end
   end
 end 

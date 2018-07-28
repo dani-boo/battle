@@ -38,12 +38,6 @@ class Battle < Sinatra::Base
     erb :attack
   end
 
-  # post '/attack' do
-  #   # attack_and_redirect($game)
-  #   $game.switch_turns
-  #   redirect('/play')
-  # end
-
   post '/switch-turns' do
     $game.switch_turns
     if $game.current_turn.computer?
@@ -57,17 +51,6 @@ class Battle < Sinatra::Base
     @game = $game
      erb :game_over
    end
-   
-  private
-  
-  def attack_and_redirect(game)
-    Attack.run(game.opponent_of(game.current_turn))
-    if game.game_over?
-      redirect '/game-over'
-    else
-      redirect '/attack'
-    end
-  end
 
   # this should start the server if done correctly
   run! if app_file == $0
