@@ -4,6 +4,6 @@
 <%= @game.player_2.name %> attacked <%= @game.player_1.name %>
 <% end %>
 
-<form action="/attack" method="post">
+<form action="/switch-turns" method="post">
       <input type="submit" value="OK">
   </form>

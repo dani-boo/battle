@@ -22,16 +22,16 @@ feature 'Playing vs. a Computer' do
   
   scenario 'computer can lose' do
     sign_in_and_play(true)
-    allow(Kernel).to receive(:rand).and_return(60)
-    click_button 'Attack!'
-    expect(page).to have_content 'Computer loses!'
+    allow(Kernel).to receive(:rand).and_return(100)
+    find_by_id('Attack').click
+    expect(page).to have_content 'Computer lost!'
   end
   
   scenario 'computer can win' do
     sign_in_and_play(true)
-    click_button 'Attack!'
-    allow(Kernel).to receive(:rand).and_return(60)
+    find_by_id('Attack').click
+    allow(Kernel).to receive(:rand).and_return(100)
     click_button 'OK'
-    expect(page).to have_content 'Vetinari loses!'
+    expect(page).to have_content 'Vetinari lost!'
   end
 end 

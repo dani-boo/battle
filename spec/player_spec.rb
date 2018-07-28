@@ -18,7 +18,7 @@ describe Player do
 
   describe '#damage' do
     it 'reduces the player\'s hit points' do
-      expect { vetinari.damage }.to change { vetinari.hit_points }.by(-10)
+      expect { vetinari.damage(10) }.to change { vetinari.hit_points }.by(-10)
     end
   end
 
