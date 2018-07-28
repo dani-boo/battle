@@ -1,7 +1,7 @@
-def sign_in_and_play
+def sign_in_and_play(computer_opponent = false)
   visit('/')
   fill_in :player_1_name, with: 'Vetinari'
-  fill_in :player_2_name, with: 'Vimes'
+  fill_in :player_2_name, with: 'Vimes' unless computer_opponent
   click_button 'Done!'
 end
 
