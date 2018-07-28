@@ -24,7 +24,7 @@ describe Player do
 
   describe '#computer?' do
     it 'returns false' do
-      expect(dave.computer?).to be false
+      expect(vetinari.computer?).to be false
     end
   end
 end

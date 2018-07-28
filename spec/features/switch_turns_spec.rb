@@ -2,7 +2,7 @@
 # So we can continue our game of Battle,
 # We want to switch turns
 describe 'Switch turns' do
-  context 'see whose turn it is' do
+  context 'show whose turn it is' do
     scenario 'when game starts' do
       sign_in_and_play
       expect(page).to have_content "Vetinari's turn"
